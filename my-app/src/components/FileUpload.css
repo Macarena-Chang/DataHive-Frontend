@@ -1,0 +1,9 @@
+.upload-send-btn {
+    background-color: var(--accent2-color);
+    border-color: var(--accent2-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    height: 48px;
+    }
+    

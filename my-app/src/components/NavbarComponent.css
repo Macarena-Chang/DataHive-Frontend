@@ -1,0 +1,61 @@
+/* .custom-navbar {
+background-color: var(--primary-color);
+}
+
+.custom-brand {
+color: var(--accent-color);
+font-weight: bold;
+font-size: 1.5rem;
+}
+
+.custom-nav-link {
+color: var(--background-color);
+margin-right: 1rem;
+}
+
+.custom-button {
+background-color: var(--accent2-color);
+color: #fff;
+border-color: var(--accent2-color);
+}
+
+.custom-button:hover {
+background-color: #005cbf;
+border-color: #005cbf;
+} */
+
+
+
+.custom-brand {
+color: var(--accent-color);
+font-weight: bold;
+font-size: 1.5rem;
+}
+
+.custom-nav-link {
+color: var(--background-color);
+margin-right: 1rem;
+}
+
+.custom-important-link {
+color: var(--accent-color);
+text-decoration: underline;
+}
+
+.custom-button {
+background-color: var(--accent2-color);
+color: #fff;
+border-color: var(--accent2-color);
+}
+
+.custom-button.custom-cta {
+font-weight: bold;
+}
+
+.custom-button:hover {
+background-color: #005cbf;
+border-color: #005cbf;
+}
+.custom-navbar {
+    background-color: #0072c6;
+}

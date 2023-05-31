@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Button, Form, Alert } from 'react-bootstrap';
 import axios from 'axios';
-
+import '../App.css'; //Import css styles from app.css
+import './FileUpload.css'; //Import css styles from app.css
 const FileUpload = ({ onUpload }) => {
 const [uploadedFiles, setUploadedFiles] = useState([]);
 const [uploading, setUploading] = useState(false);
@@ -44,7 +45,7 @@ setUploading(false);
 
 return (
 <Card className="file-upload-card">
-<Card.Header className="bg-primary text-white">
+<Card.Header className="card-header-custom text-white">
     <h5 className="mb-0">Upload Files</h5>
 </Card.Header>
 <Card.Body>
@@ -59,7 +60,7 @@ return (
         onChange={handleFileUpload}
         />
     </Form.Group>
-    <Button type="submit" className="w-100" disabled={uploading}>
+    <Button type="submit" className="w-100 upload-send-btn"   disabled={uploading}>
         {uploading ? 'Uploading...' : 'Upload'}
     </Button>
     {uploadMessage && <div className="mt-3">{uploadMessage}</div>}

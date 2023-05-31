@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+
+.App div{
+  background-color: #f2f2f2
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,3 +43,39 @@
   }
 }
 
+:root {
+  --primary-color: #333333; 
+  --accent-color: #4fadf2; 
+  --background-color: #f2f2f2; 
+  --accent2-color: #0072c6; 
+}
+
+.app-container {
+  background-color: var(--primary-color); /* Use the primary color variable for the background color */
+}
+
+.app-container > *:not(.navbar) {
+  background-color:var(--primary-color) /* Set the background color of all children except .navbar to white */
+}
+#navbar-nav {
+  background-color: #0072c6;
+}
+.custom-navbar a{
+  background-color: var(--accent2-color);
+}
+
+.card-header-custom{
+  background-color: var(--accent2-color);
+}
+
+pre {
+  background-color: rgb(26, 26, 26) !important;
+  /* color: #f2f2f2  !important;  */
+  margin: 0.5em 0;
+  border-radius: 3px;
+  overflow: auto;
+  padding: 1em;
+  border: 0.3em solid rgb(26, 26, 26)  !important;
+
+  
+} 
