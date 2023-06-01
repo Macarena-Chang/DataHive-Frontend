@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Modal, Button, Form, Tabs, Tab, Alert, ButtonGroup } from "react-bootstrap";
 import {
 FacebookLoginButton,
 GoogleLoginButton,
 } from "react-social-login-buttons";
+import { AuthContext } from '../../contexts/AuthContext';
 import axios from "axios";
 
+
 function LoginRegisterModal() {
+const { isAuth, setIsAuth } = useContext(AuthContext);
 const [show, setShow] = useState(false);
 const [activeKey, setActiveKey] = useState("login");
 const [errorMessage, setErrorMessage] = useState("");
@@ -39,6 +42,7 @@ try {
   );
   // Handle successful login
   localStorage.setItem("access_token", res.data.access_token);
+  setIsAuth(true);  // update authentication status
   handleClose()
   const config = {
     headers: {
@@ -95,6 +99,7 @@ const res = await axios.post(
     config
   );
 localStorage.setItem("access_token", res.data.access_token);
+setIsAuth(true);  // update authentication status
 handleClose()
 
 } catch (error) {
