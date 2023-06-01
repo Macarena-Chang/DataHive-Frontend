@@ -4,7 +4,7 @@ import NavbarComponent from './components/NavbarComponent';
 //import CardUpload from './components/CardUpload';
 //import CardSearch from './components/CardSearch';
 import Footer from './components/Footer';
-import Summarizer from './pages/SummarizerPage';
+import HomePage from './pages/HomePage';
 import Chat from './pages/ChatPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Modal, Button } from "react-bootstrap";
@@ -21,6 +21,7 @@ return (
 </AuthContextProvider>
 <div className="container my-3">
 <Routes>
+<Route path="/" element={<HomePage />} />
 <Route path="/chat" element={<Chat />} />
 </Routes>
 <Routes>
