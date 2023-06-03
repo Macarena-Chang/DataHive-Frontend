@@ -26,9 +26,13 @@ My Logo
         {!isAuth && (
         <LoginRegisterModal />
         )}
-<Nav.Link href="/chat" className="custom-nav-link">CHAT</Nav.Link>
-<TestAPIButton />
-<Nav.Link href="/myprofile" className="custom-nav-link custom-important-link">MY PROFILE</Nav.Link>
+{isAuth && (
+            <>
+            <Nav.Link href="/chat" className="custom-nav-link">CHAT</Nav.Link>
+            <TestAPIButton />
+            <Nav.Link href="/myprofile" className="custom-nav-link custom-important-link">MY PROFILE</Nav.Link>
+        </>
+        )}
 </Nav>
 </Navbar.Collapse>
 </Navbar>
