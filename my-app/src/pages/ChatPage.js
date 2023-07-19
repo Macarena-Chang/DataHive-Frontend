@@ -21,7 +21,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Alert } from "react-bootstrap";
-import useUser from '../hooks/useUser'; 
+/* import useUser from '../hooks/useUser';  */
 library.add(faSpinner);
 
 const ChatPage = () => {
@@ -36,7 +36,7 @@ const ChatPage = () => {
   });
   const codeRegex = /```(.*?)```/s;
   
-  const { name, userId } = useUser(); // hook 
+ /*  const { name, userId } = useUser(); // hook  */
 
   useEffect(() => {
     const fetchFileNames = async () => {

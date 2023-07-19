@@ -37,7 +37,7 @@ onUpload(response.data.message);
 setUploadMessage(response.data.message);
 setUploadedFiles([]);
 } catch (error) {
-setError('1 An error occurred while uploading the files. Please try again.');
+setError('An error occurred while uploading the files. Please try again.');
 } finally {
 setUploading(false);
 }
