@@ -168,8 +168,8 @@ setIsAuth(true);  // update authentication status */
                 </Form.Group>
                 <div className="text-center mt-3 d-grid gap-2 btn-log-reg">
                   <Button
-                    className="btn-log-reg"
-                    variant="primary"
+                    className="btn-log-reg w-auto"
+                    size="lg"
                     type="submit"
                   >
                     LOGIN
@@ -205,13 +205,15 @@ setIsAuth(true);  // update authentication status */
                   />
                 </Form.Group>
                 <div className="text-center mt-3 d-grid gap-2">
-                  <Button
-                    className="btn-log-reg"
-                    variant="primary"
-                    type="submit"
-                  >
-                    REGISTER
-                  </Button>
+                  <div className="text-center mt-3 d-grid gap-2 btn-log-reg">
+                    <Button
+                      className="btn-log-reg w-auto"
+                      size="lg"
+                      type="submit"
+                    >
+                      REGISTER
+                    </Button>
+                  </div>
                 </div>
               </Form>
             </Tab>

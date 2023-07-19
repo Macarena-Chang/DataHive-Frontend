@@ -13,7 +13,7 @@ function NavbarComponent() {
 return (
 <Navbar expand="md" className="custom-navbar">
 <Navbar.Brand href="/" className="custom-brand">
-My Logo
+DataHive
 </Navbar.Brand>
 <Navbar.Toggle aria-controls="navbar-nav" />
 <Navbar.Collapse id="navbar-nav">

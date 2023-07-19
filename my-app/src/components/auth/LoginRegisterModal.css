@@ -24,9 +24,9 @@
 
 
   .btn-log-reg{
-    background-color:var(--primary-color);
-    border:var(--muted-color);
-    color: var(--accent-color);
+   /*  background-color:var(--primary-color); */
+   /*  border:var(--muted-color); */
+   /*  color: var(--accent-color); */
     /* padding: 10px 20px; */
     /* border-radius: 5px; */
     cursor: pointer;
@@ -47,7 +47,7 @@
    /*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     background-color: var(--accent-color);
     --bs-nav-tabs-border-width: 3px solid var(--primary-color);
-    --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+/*     --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color); */
   }
   
   .nav-tabs .nav-item {
@@ -57,16 +57,21 @@
   
   .nav-tabs .nav-link {
     color: #596068;
-    background-color: #e7e7e8;
+    background-color:var( --extralightgrey-color); 
     border-color:var(--darkgrey-color);
+    border-width: 1px;
   }
   
 
-
+  .nav-item.nav-link:hover{
+    border-width: 1px;
+    border-color: #596068;
+  }
   .nav-tabs .nav-link.active {
-    color: var(--primary-color);
-    background-color:var(--accent-color);
-    border-left: solid 5px var(--high-color);
+    color: var( --darkgrey-color);
+    font-weight: bold;
+    background-color:var(--lt-color-gray-300);
+    border-left: solid 7px var(--high-color);
     border-top: solid 1px var(--primary-color);
     border-bottom: solid 1px var(--high-color);
     border-right: solid 2px var(--primary-color);
