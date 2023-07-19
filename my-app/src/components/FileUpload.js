@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Button, Form, Alert } from 'react-bootstrap';
 import axios from 'axios';
-import '../App.css'; //Import css styles from app.css
-import './FileUpload.css'; //Import css styles from app.css
+import '../App.css'; 
+import './FileUpload.css';
 const FileUpload = ({ onUpload }) => {
 const [uploadedFiles, setUploadedFiles] = useState([]);
 const [uploading, setUploading] = useState(false);
@@ -27,7 +27,7 @@ uploadedFiles.forEach((file) => {
 });
 
 try {
-    const response = await axios.post('http://0.0.0.0:8000/upload', formData, {
+    const response = await axios.post('http://0.0.0.0:8000/files', formData, {
     headers: {
     'Content-Type': 'multipart/form-data',
     },
@@ -37,7 +37,7 @@ onUpload(response.data.message);
 setUploadMessage(response.data.message);
 setUploadedFiles([]);
 } catch (error) {
-setError('An error occurred while uploading the files. Please try again.');
+setError('1 An error occurred while uploading the files. Please try again.');
 } finally {
 setUploading(false);
 }

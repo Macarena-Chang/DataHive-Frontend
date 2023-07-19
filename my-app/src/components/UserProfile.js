@@ -12,14 +12,14 @@ const token = localStorage.getItem('access_token');
 const config = { headers: { 'Authorization': 'Bearer ' + token } };
 
 
-// Fetch user profile data
+/* // Fetch user profile data
 axios.get('http://localhost:8000/users/me', config)
   .then(res => {
     setName(res.data.name);
   })
   .catch(error => {
     console.error(error);
-  });
+  }); */
 
 // Fetch user's file IDs
 axios.get('http://localhost:8000/users/me/files', config)

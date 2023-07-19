@@ -21,16 +21,16 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:var(--accent-color)
 }
 
 .App-link {
-  color: #61dafb;
+  color:var(--accent-color);
 }
 
 
 .App div{
-  background-color: #f2f2f2
+  background-color:var(--accent-color)
 }
 
 
@@ -44,28 +44,90 @@
 }
 
 :root {
-  --primary-color: #333333; 
-  --accent-color: #4fadf2; 
+  
+  --primary-color: var(--lt-color-gray-100); 
+  --secondary-color: var(--blue-500);
+  --hover-color:var(--blue-chill-800);
+  --lighter-color: #cdfffd; 
+  --accent-color: var(--blue-chill-700);
+  --text-color:var(--lt-color-gray-700) !important;
+  --high-color: #f44336; 
+  --darkgrey-color: #333;
+  --grey-color:#F5F5F5;
+  --lightgrey-color:#DDD;
+  --extralightgrey-color:#f5f5f5;
+
+
+--blue-50: #E5F3FF;
+--blue-100:#C7E5FF;
+--blue-200:#94CDFF;
+--blue-300:#5CB3FF;
+--blue-400:#2499FF;
+--blue-500:#007FED;
+--blue-600:#0065BD;
+--blue-700:#004C8F;
+--blue-800:#003461;
+--blue-900:#00182E;
+--blue-950:#000E19;
+
+--blue-light-color:var(--blue-300) !important;
+
+
+--lt-color-gray-100: #f8f9fc;
+--lt-color-gray-200: #f1f3f9;
+--lt-color-gray-300: #dee3ed;
+--lt-color-gray-400: #c2c9d6;
+--lt-color-gray-500: #8f96a3;
+--lt-color-gray-600: #5e636e;
+--lt-color-gray-700: #2f3237;
+--lt-color-gray-800: #1d1e20;
+--lt-color-gray-900: #111213;
+--lt-color-white: #fff !important;
+--lt-color-black: #111213 !important;
+--lt-color-transparent: rgba(255, 255, 255, 0) !important;
+--lt-color-background-light: var(--lt-color-gray-100) !important;
+--lt-color-background-default: var(--lt-color-gray-200) !important;
+--lt-color-background-dark: var(--lt-color-gray-300) !important;
+--lt-color-border-light: var(--lt-color-gray-200) !important;
+--lt-color-border-default: var(--lt-color-gray-300) !important;
+--lt-color-border-dark: var(--lt-color-gray-400) !important;
+--lt-color-text-very-light: var(--lt-color-white) !important;
+--lt-color-text-light: var(--lt-color-gray-600) !important;
+--lt-color-text-default: var(--lt-color-gray-700) !important;
+--lt-color-text-dark: var(--lt-color-gray-800) !important;
+--lt-color-overlay-default: #fff !important;
+--lt-color-overlay-dark: #fff !important;
+--lt-color-overlay-transparent: rgba(0, 0, 0, 0.1) !important;
+--hover-dark: var(--blue-600)
+
+
+/*   --primary-color: #0a8f9c; 
+  --accent-color: #00bcd4; 
   --background-color: #f2f2f2; 
   --accent2-color: #0072c6; 
+
+ */
 }
 
 .app-container {
-  background-color: var(--primary-color); /* Use the primary color variable for the background color */
+  background-color: var(--lt-color-background-default); /* Use the primary color variable for the background color */
 }
 
+/*
 .app-container > *:not(.navbar) {
   background-color:var(--primary-color) /* Set the background color of all children except .navbar to white */
-}
+*/
+
 #navbar-nav {
-  background-color: #0072c6;
+  background-color:var(--secondary-color);
 }
 .custom-navbar a{
-  background-color: var(--accent2-color);
+  background-color: var(--secondary-color);
+  color: var(--extralightgrey-color)
 }
 
 .card-header-custom{
-  background-color: var(--accent2-color);
+  background-color: var(--blue-500);
 }
 
 pre {
@@ -78,4 +140,21 @@ pre {
   border: 0.3em solid rgb(26, 26, 26)  !important;
 
   
-} 
+}
+
+
+.btn {
+  font-weight: bold;
+}
+.navbar {
+
+  font-weight: bold;
+}
+
+.btn:disabled, .btn.disabled, fieldset:disabled {
+  color: var(--hover-color);
+  pointer-events: none;
+  background-color: var(--bs-btn-lighter-bg);
+  border-color: var(--bs-btn-lighter-border-color);
+}
+

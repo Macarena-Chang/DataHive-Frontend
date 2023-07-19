@@ -27,35 +27,37 @@ border-color: #005cbf;
 
 
 .custom-brand {
-color: var(--accent-color);
+color: var(--secondary-color);
 font-weight: bold;
 font-size: 1.5rem;
 }
 
 .custom-nav-link {
-color: var(--background-color);
+color: var(--accent-color);
 margin-right: 1rem;
+text-decoration: none;
 }
 
-.custom-important-link {
+/* .custom-important-link {
 color: var(--accent-color);
-text-decoration: underline;
-}
+text-decoration: none;
+} */
 
 .custom-button {
-background-color: var(--accent2-color);
-color: #fff;
-border-color: var(--accent2-color);
+background-color: var(--secondary-color);
+color: var(--accent-color);
+border:2px solid var(--lighter-color);
 }
 
 .custom-button.custom-cta {
 font-weight: bold;
 }
 
-.custom-button:hover {
+/* .custom-button:hover {
 background-color: #005cbf;
 border-color: #005cbf;
-}
+} */
 .custom-navbar {
-    background-color: #0072c6;
+    background-color:var(--secondary-color);
+    --bs-navbar-padding-y: 0.0rem;
 }

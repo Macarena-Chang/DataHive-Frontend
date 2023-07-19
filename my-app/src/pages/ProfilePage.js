@@ -5,11 +5,11 @@ import UserProfile from '../components/UserProfile';
 
 const myprofilePage = () => {
     return (
-    <container>
-        <Row>
+    <Container>
+       
             <UserProfile />
-        </Row>
-    </container>
+    
+    </Container>
     
     );
 };

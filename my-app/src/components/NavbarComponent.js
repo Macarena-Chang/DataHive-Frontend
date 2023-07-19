@@ -22,16 +22,23 @@ My Logo
 
 <Nav.Link href="/about" className="custom-nav-link custom-important-link">ABOUT</Nav.Link>
 {/* <Nav.Link href="/contact" className="custom-nav-link custom-important-link">CONTACT</Nav.Link> */}
-<Nav.Link href="/about" className="custom-nav-link custom-important-link">ABOUT</Nav.Link>
         {!isAuth && (
         <LoginRegisterModal />
         )}
 {isAuth && (
             <>
             <Nav.Link href="/chat" className="custom-nav-link">CHAT</Nav.Link>
-            <TestAPIButton />
-            <Nav.Link href="/myprofile" className="custom-nav-link custom-important-link">MY PROFILE</Nav.Link>
+          
+            <Nav.Link href="/profile" className="custom-nav-link custom-important-link">MY PROFILE</Nav.Link>
+
+
         </>
+        
+        )}
+</Nav>
+<Nav className="ml-auto" >
+{isAuth && (
+       <TestAPIButton />
         )}
 </Nav>
 </Navbar.Collapse>

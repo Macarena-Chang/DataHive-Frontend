@@ -1,0 +1,13 @@
+
+.custom-button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--accent-color);
+  }
+
+.custom-button:hover {
+    background-color:var(--accent-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color);
+}
+

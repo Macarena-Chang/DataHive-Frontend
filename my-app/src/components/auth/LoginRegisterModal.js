@@ -5,6 +5,7 @@ FacebookLoginButton,
 GoogleLoginButton,
 } from "react-social-login-buttons";
 import { AuthContext } from '../../contexts/AuthContext';
+import './LoginRegisterModal.css';
 import axios from "axios";
 
 
@@ -36,7 +37,7 @@ const config = {
 
 try {
   const res = await axios.post(
-    "http://localhost:8000/login",
+    "http://localhost:8000/users/login",
     formData,
     config
   );
@@ -94,7 +95,7 @@ const config = {
 };
 
 const res = await axios.post(
-    "http://localhost:8000/login",
+    "http://localhost:8000/users/login",
     formDataR,
     config
   );
@@ -110,23 +111,29 @@ setErrorMessage("Registration failed");
 
 return (
 <>
-<Button variant="primary" onClick={handleShow}>
+<Button  className="custom-button" onClick={handleShow}>
 Login / Register
 </Button>
 
 
   <Modal show={show} onHide={handleClose}>
-    <Modal.Header closeButton>
-      <Modal.Title>Login / Register</Modal.Title>
-    </Modal.Header>
+{/*     <Modal.Header> */}
+    {/* <Modal.Header closeButton> */}
+    {/* <Button variant="secondary btn" onClick={handleClose}>
+        x
+      </Button>  */}
+{/*     </Modal.Header> */}
     <Modal.Body>
       {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
-      <Tabs activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
-        <Tab eventKey="login" title="Login">
+      <Tabs defaultActiveKey="LOGIN"
+      className="mb-3"
+      fill role="tablist" >
+        <Tab eventKey="login" title="LOGIN" className="tab-login">
+{/*         <Modal.Title  className="custom-login-btn" >LOGIN</Modal.Title> */}
           <Form onSubmit={handleLogin}>
             <Form.Group controlId="formBasicEmail">
-              <FacebookLoginButton onClick={() => alert("Hello")} />
-              <GoogleLoginButton onClick={() => alert("Hello")} />
+             {/*  <FacebookLoginButton onClick={() => alert("Hello")} />
+              <GoogleLoginButton onClick={() => alert("Hello")} /> */}
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
@@ -142,14 +149,15 @@ Login / Register
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Login
+            <div className="text-center mt-3 d-grid gap-2 btn-log-reg">
+            <Button className="btn-log-reg" variant="primary" type="submit">
+              LOGIN
             </Button>
-            <p>Forgot Password?</p>
+            </div>
           </Form>
         </Tab>
-        <Tab eventKey="register" title="Register">
+        <Tab eventKey="register" title="REGISTER" className="tab-register">
+{/*         <Modal.Title  className="custom-login-btn" >REGISTER</Modal.Title> */}
           <Form onSubmit={handleRegister}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -175,22 +183,24 @@ Login / Register
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Register
+            <div className="text-center mt-3 d-grid gap-2">
+            <Button className="btn-log-reg" variant="primary" type="submit">
+              REGISTER
             </Button>
+            </div>
           </Form>
         </Tab>
       </Tabs>
+      
     </Modal.Body>
     <Modal.Footer>
-      
+    <p>Forgot Password?</p>
+{/*       
         <ButtonGroup className="w-100" aria-label="Login and Register">
             <Button variant="secondary" type="submit" onClick={handleLogin} className="w-100">Login</Button>
             <Button variant="primary" type="submit" onClick={handleRegister} className="w-100">Register</Button>
-        </ButtonGroup>
-      <Button variant="secondary" onClick={handleClose}>
-        Close
-      </Button>
+        </ButtonGroup> */}
+
     </Modal.Footer>
   </Modal>
 </>

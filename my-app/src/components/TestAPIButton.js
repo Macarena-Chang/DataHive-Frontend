@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import './TestAPIButton.css';
 import axios from 'axios';
 
 function TestAPIButton() {
@@ -24,8 +25,8 @@ function TestAPIButton() {
   };
 
   return (
-    <Button variant="primary" onClick={handleTestAPI}>
-      Test API
+    <Button className="custom-button" onClick={handleTestAPI}>
+      LOGOUT
     </Button>
   );
 }

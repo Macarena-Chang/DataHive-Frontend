@@ -1,0 +1,82 @@
+.custom-button {
+    background-color: var(--primary-color);
+    /* border-color: your_color; */
+    color: var(--accent-color)
+    /* Add this if you want to change the color on hover */
+/*     &:hover {
+      background-color: your_hover_color;
+      border-color: your_hover_color;
+    } */
+    
+  }
+
+  .custom-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  .btn-log-reg{
+    background-color:var(--primary-color);
+    border:var(--muted-color);
+    color: var(--accent-color);
+    /* padding: 10px 20px; */
+    /* border-radius: 5px; */
+    cursor: pointer;
+  }
+
+
+/*   .custom-login-btn {
+    background-color: var(--primary-color)
+  } */
+
+.modal-content{
+  background-color: var(--lt-color-background-dark);
+  }
+
+  .tab-pane {
+    padding: 1rem;
+    border-radius: 0.25rem;
+   /*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    background-color: var(--accent-color);
+    --bs-nav-tabs-border-width: 3px solid var(--primary-color);
+    --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+  }
+  
+  .nav-tabs .nav-item {
+    margin-bottom: -1px;
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #596068;
+    background-color: #e7e7e8;
+    border-color:var(--darkgrey-color);
+  }
+  
+
+
+  .nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color:var(--accent-color);
+    border-left: solid 5px var(--high-color);
+    border-top: solid 1px var(--primary-color);
+    border-bottom: solid 1px var(--high-color);
+    border-right: solid 2px var(--primary-color);
+  }
+
+  .nav-tabs .nav-link {
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+
+  .custom-login-modal{
+    display: inline;
+  }

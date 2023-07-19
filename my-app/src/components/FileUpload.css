@@ -1,9 +1,13 @@
 .upload-send-btn {
-    background-color: var(--accent2-color);
-    border-color: var(--accent2-color);
-    color: #fff;
+    background-color: var(--blue-500);
+    border-color: var(-lt-color-border-light);
+    color: var(--lt-color-text-very-light);
     font-size: 16px;
     font-weight: 500;
     height: 48px;
     }
-    
+
+.upload-send-btn:hover {
+    background-color:var(--hover-dark);
+    border-color: var(-lt-color-border-default);
+}

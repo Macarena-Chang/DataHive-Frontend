@@ -27,15 +27,15 @@ text-align: right;
 }
 
 .chat-card .dropdown-toggle {
-background-color: #f1f1f1;
-border-color: #f1f1f1;
-color: #333;
+background-color: var(--lightgrey-color);
+border-color: 1px solid var(--darkgrey-color);
+color: var(--darkgrey-color);
 font-size: 14px;
 font-weight: 500;
 }
 
 .chat-card .dropdown-menu {
-background-color: #fff;
+background-color:var(--lightgrey-color);
 border: none;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -59,8 +59,8 @@ height: 48px;
 }
 
 .chat-card .chat-send-btn {
-background-color: var(--accent2-color);
-border-color: var(--accent2-color);
+background-color: var(--accent-color);
+border-color: var(--accent-color);
 color: #fff;
 font-size: 16px;
 font-weight: 500;
@@ -68,12 +68,12 @@ height: 48px;
 }
 
 .chat-card .chat-send-btn:hover {
-background-color: #0072c6;
-border-color: #0072c6;
+background-color:var(--hover-color);
+border-color: var(--hover-color);
 }
 
 .chat-feedback {
-background-color: #f1f1f1;
+background-color: var(--accent-color);
 border-radius: 12px;
 margin-top: 10px;
 padding: 10px 20px;
@@ -124,26 +124,26 @@ animation: slideInUp 0.5s ease-in-out;
 
 }
 .list-group-item.user {
-    background-color: #F5F5F5;
-    border: 1px solid #DDD;
+    background-color: var(--extralightgrey-color);
+    border: 1px solid  var(--lightgrey-color);
     margin-left: 30%;
     border-radius: 20px !important;
 }
 
 .list-group-item.user.unread {
-    border: 1px solid #0072c6;
+    border: 1px solid var(--primary-color);
 }
 
 .list-group-item.bot {
-background-color: #0072c6;
-color: #FFF;
-border: 1px solid #0072c6;
+background-color: var(--lt-color-gray-600);
+color: var(--lt-color-text-very-light);
+border: 1px solid var(--primary-color);
 margin-right: 30%;
 border-radius: 20px !important;
 }
 
 .list-group-item.bot.unread {
-    border: 1px solid #FFF;
+    border:  1px solid var(--accent-color);
 }
 .list-group-item .user-name {
     font-weight: bold;
