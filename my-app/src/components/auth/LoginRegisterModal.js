@@ -138,7 +138,7 @@ setIsAuth(true);  // update authentication status */
           </Card>
         )}
         <Modal.Header>
-          <Button variant="secondary btn" onClick={handleClose}>
+          <Button className="custom-button" bsSize="small" onClick={handleClose}>
             x
           </Button>
         </Modal.Header>

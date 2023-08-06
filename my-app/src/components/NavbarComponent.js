@@ -4,6 +4,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import './NavbarComponent.css';
 import LoginRegisterModal from './auth/LoginRegisterModal';
 import TestAPIButton from './TestAPIButton';
+import LogoutButton from './auth/LogoutButton';
 
 function NavbarComponent() {
     const { isAuth } = useContext(AuthContext);
@@ -38,7 +39,7 @@ DataHive
 </Nav>
 <Nav className="ml-auto" >
 {isAuth && (
-       <TestAPIButton />
+       <LogoutButton />
         )}
 </Nav>
 </Navbar.Collapse>
